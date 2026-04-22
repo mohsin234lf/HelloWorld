@@ -22,7 +22,6 @@ resource "aws_instance" "k3s_server" {
   instance_type = "t3.micro"
   key_name      = var.key_name
 
-  # Existing Security Group
   vpc_security_group_ids = ["sg-0591837bebe422401"]
 
   user_data = <<-EOF
